@@ -282,4 +282,4 @@ The final step is to combine everything you have accomplished thus far and popul
 
 Consider what needs to be done and the order in which those tasks should be performed.
 
-_Remember, you may need to execute part of the data insertion and then return to Task 2 of Section 2 to utilize the newly inserted data._
+> _Remember, you may need to execute part of the data insertion and then return to Task 2 of Section 2 to utilize the newly inserted data._
