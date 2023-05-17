@@ -34,6 +34,7 @@ It is essential to have a clear understanding of the expected arguments for each
 ### Task 1 - Transforming Department Data
 The ' function is responsible for processing a list of dictionaries with the following format and returning a list of lists containing the **department_name**.
 
+```py
 # EXAMPLE INPUT
 [
     {
@@ -52,10 +53,12 @@ The ' function is responsible for processing a list of dictionaries with the fol
 
 # OUTPUT
 [['Beauty'], ['Footwear']]
+```
 
 ### Task 2 - Transforming Stock Data
 The format_stock function is responsible for processing a list of dictionaries with the following format and returning a list containing the **item_name** and the **amount**.
 
+```py
 # EXAMPLE INPUT
 [
     {
@@ -98,10 +101,12 @@ The format_features function is responsible for processing a list of dictionarie
 
 # OUTPUT
 [['Designer'], ['Faux-Faux-Leather'], ['Fragrance']]
+```
 
 ### Task 4 - Transforming Staff Data
 The format_staff function should accept a list of dictionaries representing staff data and a list of dictionaries representing the new department data. It should return a list of lists containing the first_name, last_name, and the correct department_id.
 
+```py
 # EXAMPLE INPUT
 # Staff list
 [
@@ -130,7 +135,7 @@ The format_staff function should accept a list of dictionaries representing staf
 
 # OUTPUT
 [['Duncan', 'Crawley', 1], ['Cat', 'Hoang', 2]]
-
+```
 
 ### Task 5 - Transforming Stock_Feature Data
 The format_stock_feature function requires data from the following data structures:
@@ -143,6 +148,8 @@ The format_stock_feature function requires data from the following data structur
 The function should return a list of lists containing the stock_id and feature_id.
 
 **Please note that each product can have multiple features, and as a result, there may be multiple instances of the same stock_id with different feature_id values.**
+
+```py
 # New stock data:
 [
     {
@@ -184,6 +191,7 @@ The function should return a list of lists containing the stock_id and feature_i
 
 # OUTPUT
 [[1, 1], [1, 2], [2, 1]]
+```
 
 ### Task 6 - Manipulate Sales Data
 The format_sales function is the final function in this task. It has the following signature:
@@ -204,6 +212,7 @@ The function should return a list of lists that contains the following informati
 - created_at
 Here's an example of the provided data:
 
+```py
 # New stock data:
 [
     {
@@ -248,6 +257,7 @@ Here's an example of the provided data:
 
 # OUTPUT
 [[1, 1, 22.49, 1, '2023-01-03 10:34:56']]
+```
 
 Please note that the price, quantity, and created_at values should be replaced with the actual values from your sales data.
 
@@ -255,7 +265,9 @@ Please note that the price, quantity, and created_at values should be replaced w
 ## Section 2: Retrieve Postgres Data
 
 To begin this section, please execute the setup-db.sql file using the following command:
+```sh
 psql -f setup-db.sql
+```
 
 This command will create both databases and insert data into the first database, preparing it for the subsequent tasks.
 
