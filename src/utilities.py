@@ -12,3 +12,23 @@ def format_departments(staff):
     for member in staff:
         departments.append([member['department']])
     return departments
+
+
+def format_stock():
+    pass
+
+
+def format_features():
+    pass
+
+
+def format_staff():
+    pass
+
+
+def format_stock_feature():
+    pass
+
+
+def format_sales():
+    pass

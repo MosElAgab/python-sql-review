@@ -57,3 +57,4 @@ def test_fucntion_multiple_values():
     assert format_departments(staff) == expected_result
 # test case to handle missing departments
 # tets case to handle departments with wrong data type
+# test for duplicate departments
