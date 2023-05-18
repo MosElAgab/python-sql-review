@@ -56,8 +56,8 @@ setup-database:
 # Run the flake8 code check
 run-flake:
 	$(call execute_in_env, flake8 \
-	./src/query_board.py \
-	./test/test_query_board.py )	
+	./src/utilities.py \
+	./test/test_format_departments.py )	
 
 ## Run a single test
 test-this:

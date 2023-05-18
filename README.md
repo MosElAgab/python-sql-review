@@ -1,4 +1,5 @@
 # python-sql-review
+
 ## Overview
 
 The purpose of these exercises is to provide you with an opportunity to practice problem solving using Python and Test-Driven Development (TDD). Although there is a component related to SQL, it is not the main focus. In assessing your work, the following aspects will be considered:
@@ -9,9 +10,9 @@ The purpose of these exercises is to provide you with an opportunity to practice
 - Implementing Test-Driven Development practices.
 - Demonstrating proficiency in using Git effectively.
 - Adhering to excellent code standards, including compliance with PEP8 guidelines and thorough documentation.
-The tasks for today are divided into sections, and it is not necessary to complete all of them. Instead, it is encouraged to focus on the first section
+  The tasks for today are divided into sections, and it is not necessary to complete all of them. Instead, it is encouraged to focus on the first section
 
-** However, please note that some of the later tasks will require the completion of previous tasks. This information will be provided in the README document.
+\*\* However, please note that some of the later tasks will require the completion of previous tasks. This information will be provided in the README document.
 
 ## The Objective
 
@@ -32,7 +33,8 @@ Your initial task is to develop six utility functions that will format the raw d
 It is essential to have a clear understanding of the expected arguments for each function and the structure of the data to be returned.
 
 ### Task 1 - Transforming Department Data
-The ' function is responsible for processing a list of dictionaries with the following format and returning a list of lists containing the **department_name**.
+
+The `format_departments` function is responsible for processing a list of dictionaries with the following format and returning a list of lists containing the **department_name**.
 
 ```py
 # EXAMPLE INPUT
@@ -56,7 +58,8 @@ The ' function is responsible for processing a list of dictionaries with the fol
 ```
 
 ### Task 2 - Transforming Stock Data
-The format_stock function is responsible for processing a list of dictionaries with the following format and returning a list containing the **item_name** and the **amount**.
+
+The `format_stock` function is responsible for processing a list of dictionaries with the following format and returning a list containing the **item_name** and the **amount**.
 
 ```py
 # EXAMPLE INPUT
@@ -78,10 +81,13 @@ The format_stock function is responsible for processing a list of dictionaries w
 
 # OUTPUT
 [['Louboutin Flip Flops', 5], ['Eau de Fromage', 10]]
+```
 
 ### Task 3 - Transforming Feature Data
-The format_features function is responsible for processing a list of dictionaries with the following format and returning a list of lists containing the unique feature_name.
 
+The `format_features` function is responsible for processing a list of dictionaries with the following format and returning a list of lists containing the unique feature_name.
+
+```py
 # EXAMPLE INPUT
 [
     {
@@ -104,7 +110,8 @@ The format_features function is responsible for processing a list of dictionarie
 ```
 
 ### Task 4 - Transforming Staff Data
-The format_staff function should accept a list of dictionaries representing staff data and a list of dictionaries representing the new department data. It should return a list of lists containing the first_name, last_name, and the correct department_id.
+
+The `format_staff` function should accept a list of dictionaries representing staff data and a list of dictionaries representing the new department data. It should return a list of lists containing the **first_name**, **last_name**, and the correct **department_id**.
 
 ```py
 # EXAMPLE INPUT
@@ -138,12 +145,13 @@ The format_staff function should accept a list of dictionaries representing staf
 ```
 
 ### Task 5 - Transforming Stock_Feature Data
-The format_stock_feature function requires data from the following data structures:
+
+The `format_stock_feature` function requires data from the following data structures:
 
 - A list representing the newly inserted stock data
 - A list representing the newly inserted feature data
 - A list representing the original stock data
-**Hint: It may be beneficial to break down this problem into multiple functions.**
+  **Hint: It may be beneficial to break down this problem into multiple functions.**
 
 The function should return a list of lists containing the stock_id and feature_id.
 
@@ -194,14 +202,15 @@ The function should return a list of lists containing the stock_id and feature_i
 ```
 
 ### Task 6 - Manipulate Sales Data
-The format_sales function is the final function in this task. It has the following signature:
+
+The `format_sales` function is the final function in this task. It has the following signature:
 
 def format_sales(new_stock_data, new_staff_data, original_sales_data):
 
 - new_stock_data is a list representing the newly inserted stock data.
 - new_staff_data is a list representing the newly inserted staff data.
-- original_sales_data is a list representing the original sales data.
-_hint: You may want to break this problem down into multiple functions._
+- original*sales_data is a list representing the original sales data.
+  \_hint: You may want to break this problem down into multiple functions.*
 
 The function should return a list of lists that contains the following information for each sale:
 
@@ -210,7 +219,7 @@ The function should return a list of lists that contains the following informati
 - price
 - quantity
 - created_at
-Here's an example of the provided data:
+  Here's an example of the provided data:
 
 ```py
 # New stock data:
@@ -261,10 +270,10 @@ Here's an example of the provided data:
 
 Please note that the price, quantity, and created_at values should be replaced with the actual values from your sales data.
 
-
 ## Section 2: Retrieve Postgres Data
 
 To begin this section, please execute the setup-db.sql file using the following command:
+
 ```sh
 psql -f setup-db.sql
 ```
@@ -272,6 +281,7 @@ psql -f setup-db.sql
 This command will create both databases and insert data into the first database, preparing it for the subsequent tasks.
 
 ### Task 1: Retrieve Initial Data
+
 > You need a way to access all the initial data from each of the three tables.
 
 > You should write a function (or functions) specifically for this purpose. The function should return the data as a list of dictionaries, where the keys align with the column titles (refer to the input examples in Section 1).
@@ -281,6 +291,7 @@ This command will create both databases and insert data into the first database,
 _THE NEXT SECTION RELIES ON SOME DATA BEING INSERTED FIRST. MOVE ON TO THE NEXT SECTION AND RETURN HERE WHEN YOU HAVE THE REQUIRED DATA INSERTED._
 
 ### Task 2: Retrieve Newly Inserted Data for the Following Tables:
+
 - 'dim_feature'
 - 'dim_stock'
 - 'dim_department'
