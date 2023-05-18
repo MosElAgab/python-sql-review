@@ -14,8 +14,8 @@ def format_departments(staff):
     return departments
 
 
-def format_stock():
-    pass
+def format_stock(stock):
+    return []
 
 
 def format_features():
