@@ -81,7 +81,7 @@ The `format_stock` function is responsible for processing a list of dictionaries
 ]
 
 # OUTPUT
-[['Nike Air Max Sneakers', 10], ['Gourmet Chocolate Box', 15]]
+[['Nike Air Max Sneakers', 8], ['Gourmet Chocolate Box', 15]]
 ```
 
 ### Task 3 - Transforming Feature Data

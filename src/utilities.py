@@ -25,8 +25,21 @@ def format_stock(stock):
     return items
 
 
-def format_features():
-    pass
+def format_features(stock):
+    if isinstance(stock, list) is not True:
+        raise TypeError('invalid input, input must be a list')
+    if len(stock) == 0:
+        raise IndexError('invalid input, list must not be empty')
+    for item in stock:
+        if isinstance(item, dict) is not True:
+            messege = 'invalid_input, input must be a list of dictionaries'
+            raise TypeError(messege)
+    features = []
+    for item in stock:
+        for feature in item['features']:
+            if [feature] not in features:
+                features.append([feature])
+    return features
 
 
 def format_staff():

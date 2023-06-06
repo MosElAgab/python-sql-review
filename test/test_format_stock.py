@@ -38,3 +38,26 @@ def test_format_departments_handles_single_value_input():
     }]
     expected_result = [['Nike Air Max Sneakers', 8]]
     assert format_stock(stock) == expected_result
+
+
+# test multiple values
+def test_format_stock_handles_multiple_values_input():
+    stock = [{
+        'item_id': 1,
+        'item_name': 'Nike Air Max Sneakers',
+        'features': ['Air Cushioning', 'Mesh Upper'],
+        'department': 'Footwear',
+        'amount': 8
+    }, {
+        'item_id': 2,
+        'item_name': 'Gourmet Chocolate Box',
+        'features': ['Assorted Flavors', 'Luxury Packaging'],
+        'department': 'Food & Beverages',
+        'amount': 15
+    }
+    ]
+    expected_result = [['Nike Air Max Sneakers', 8], ['Gourmet Chocolate Box', 15]]
+    assert format_stock(stock) == expected_result
+
+
+# test for missing values
