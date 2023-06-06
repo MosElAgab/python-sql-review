@@ -57,7 +57,8 @@ setup-database:
 run-flake:
 	$(call execute_in_env, flake8 \
 	./src/utilities.py \
-	./test/test_format_departments.py )	
+	./test/test_format_departments.py \
+	./test/test_format_stock.py )	
 
 ## Run a single test
 test-this:

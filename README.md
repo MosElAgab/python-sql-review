@@ -41,14 +41,14 @@ The `format_departments` function is responsible for processing a list of dictio
 [
     {
         'staff_id': 1,
-        'first_name': 'Will',
-        'last_name': 'Crawley',
+        'first_name': 'John',
+        'last_name': 'Smith',
         'department': 'Beauty'
     },
     {
         'staff_id': 2,
-        'first_name': 'Cat',
-        'last_name': 'Hoang',
+        'first_name': 'Emily',
+        'last_name': 'Johnson',
         'department': 'Footwear'
     }
 ]
@@ -66,21 +66,22 @@ The `format_stock` function is responsible for processing a list of dictionaries
 [
     {
         'item_id': 1,
-        'item_name': 'Louboutin Flip Flops',
-        'features': ['Designer', 'Faux-Faux-Leather'],
+        'item_name': 'Nike Air Max Sneakers',
+        'features': ['Air Cushioning', 'Mesh Upper'],
         'department': 'Footwear',
-        'amount': 5
-    }, {
+        'amount': 8
+    },
+    {
         'item_id': 2,
-        'item_name': 'Eau de Fromage',
-        'features': ['Fragrance', 'Designer'],
-        'department': 'Beauty',
-        'amount': 10
+        'item_name': 'Gourmet Chocolate Box',
+        'features': ['Assorted Flavors', 'Luxury Packaging'],
+        'department': 'Food & Beverages',
+        'amount': 15
     }
 ]
 
 # OUTPUT
-[['Louboutin Flip Flops', 5], ['Eau de Fromage', 10]]
+[['Nike Air Max Sneakers', 10], ['Gourmet Chocolate Box', 15]]
 ```
 
 ### Task 3 - Transforming Feature Data
