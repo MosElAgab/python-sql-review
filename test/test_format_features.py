@@ -12,7 +12,7 @@ def test_format_features_returns_list_with_valid_input():
         )) == list
 
 
-# it only accepts input of type list
+# test function only accepts input of type list
 def test_format_features_raises_type_error_for_invalid_input_type():
     with pytest.raises(TypeError):
         format_features('')

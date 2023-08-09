@@ -58,7 +58,9 @@ run-flake:
 	$(call execute_in_env, flake8 \
 	./src/utilities.py \
 	./test/test_format_departments.py \
-	./test/test_format_stock.py )	
+	./test/test_format_stock.py \
+	./test/test_format_staff.py \
+	./test/test_format_stock_feature.py )	
 
 ## Run a single test
 test-this:

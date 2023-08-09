@@ -120,8 +120,8 @@ The `format_staff` function should accept a list of dictionaries representing st
 [
     {
         'staff_id': 1,
-        'first_name': 'Duncan',
-        'last_name': 'Crawley',
+        'first_name': 'Ali',
+        'last_name': 'Coa',
         'department': 'Beauty'
     }, {
         'staff_id': 2,
@@ -142,7 +142,7 @@ The `format_staff` function should accept a list of dictionaries representing st
 ]
 
 # OUTPUT
-[['Duncan', 'Crawley', 1], ['Cat', 'Hoang', 2]]
+[['Ali', 'Coa', 1], ['Cat', 'Hoang', 2]]
 ```
 
 ### Task 5 - Transforming Stock_Feature Data
