@@ -87,5 +87,26 @@ def format_stock_feature(new_stock_data, new_feature_data,
     return result
 
 
-def format_sales():
-    pass
+def format_sales(new_stock_data, new_staff_data,
+                 original_sales_data):
+    result = []
+
+    def find_staff_id(name):
+        for staff in new_staff_data:
+            if staff['first_name'] + ' ' + staff['last_name'] == name:
+                return staff['staff_id']
+
+    def find_item_id(item_name):
+        for item in new_stock_data:
+            if item['item_name'] == item_name:
+                return item['item_id']
+
+    for sale in original_sales_data:
+        row = []
+        row.append(find_item_id(sale['item_name']))
+        row.append(find_staff_id(sale['salesperson']))
+        row.append(sale['price'])
+        row.append(sale['quantity'])
+        row.append(sale['created_at'])
+        result.append(row)
+    return result

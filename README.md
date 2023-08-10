@@ -211,7 +211,7 @@ def format_sales(new_stock_data, new_staff_data, original_sales_data):
 - new_stock_data is a list representing the newly inserted stock data.
 - new_staff_data is a list representing the newly inserted staff data.
 - original*sales_data is a list representing the original sales data.
-  \_hint: You may want to break this problem down into multiple functions.*
+\_ hint: You may want to break this problem down into multiple functions.*
 
 The function should return a list of lists that contains the following information for each sale:
 

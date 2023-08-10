@@ -56,7 +56,8 @@ def test_format_stock_handles_multiple_values_input():
         'amount': 15
     }
     ]
-    expected_result = [['Nike Air Max Sneakers', 8], ['Gourmet Chocolate Box', 15]]
+    expected_result = [['Nike Air Max Sneakers', 8],
+                       ['Gourmet Chocolate Box', 15]]
     assert format_stock(stock) == expected_result
 
 
