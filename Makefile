@@ -63,7 +63,10 @@ run-flake:
 	./test/test_format_stock_feature.py \
 	./test/test_format_sales.py \
 	./src/extract_utilities.py \
-	./test/test_extract_utilities.py )	
+	./test/test_extract_utilities.py \
+	./src/load_utilities.py \
+	./src/orchestration.py \
+	./test/test_load_utilities.py )	
 
 ## Run a single test
 test-this:

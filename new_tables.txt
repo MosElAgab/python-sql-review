@@ -1,0 +1,101 @@
+You are now connected to database "nc_sells_fridges" as user "yangzhang".
+
+new tables:
+
+                List of relations
+ Schema |        Name        | Type  |   Owner   
+--------+--------------------+-------+-----------
+ public | dim_department     | table | yangzhang
+ public | dim_features       | table | yangzhang
+ public | dim_staff          | table | yangzhang
+ public | dim_stock          | table | yangzhang
+ public | fact_sales         | table | yangzhang
+ public | stock_feature_junc | table | yangzhang
+(6 rows)
+
+
+- dim_department
+
+ department_id | department_name 
+---------------+-----------------
+             1 | {Footwear}
+             2 | {Beauty}
+             3 | {Grocery}
+             4 | {Health}
+             5 | {Kids}
+             6 | {Movies}
+             7 | {Home}
+             8 | {Games}
+             9 | {Baby}
+            10 | {Tools}
+            11 | {Music}
+            12 | {Sports}
+            13 | {Jewelry}
+            14 | {Garden}
+(14 rows)
+
+
+- dim_features
+
+ feature_id |       feature_name       
+------------+--------------------------
+          1 | {Designer}
+          2 | {Faux-Faux-Leather}
+          3 | {Fragrance}
+          4 | {Classic}
+          5 | {Roller-Application}
+          6 | {Multipack}
+          7 | {Breezy}
+          8 | {Restorative}
+          9 | {Multi-coloured}
+         10 | {Functional}
+         11 | {Unique}
+         12 | {Fluffy}
+         13 | {Fun-for-all-the-family}
+         14 | {Friendship-killer}
+         15 | {Safe}
+         16 | {Rare}
+         17 | {Drum-sticks}
+         18 | {Stool}
+         19 | {2-player}
+         20 | {Variable-weight}
+         21 | {Mirror-finish}
+         22 | {"DIY kit"}
+         23 | {Straps}
+         24 | {Scary}
+         25 | {Immersive-experience}
+         26 | {Balanced}
+(26 rows)
+
+
+- dim_stock
+
+ stock_id |         item_name         | amount_in_stock 
+----------+---------------------------+-----------------
+        1 | Louboutin Flip Flops      |              50
+        2 | Eau de Fromage            |              20
+        3 | Space Raiders             |              50
+        4 | Bags be gone              |              10
+        5 | Croc Martins              |              80
+        6 | 1up                       |              75
+        7 | Backpack                  |               5
+        8 | Shrek Complete Collection |              10
+        9 | Phillipe Fellope          |              12
+       10 | Faux SheepSkin Rug        |              37
+       11 | Mario Party               |              28
+       12 | Car seat                  |              68
+       13 | Bucket of sparks          |              23
+       14 | Bath robe                 |              12
+       15 | Drum Kit                  |               4
+       16 | Guess Who                 |               5
+       17 | A long weight             |              16
+       18 | Chain link bracelet       |              36
+       19 | Rattan Furniture          |              84
+       20 | Chocolate Fireguard       |              24
+       21 | Croydon Facelift          |              34
+       22 | Rebooks                   |              31
+       23 | Unlabelled VHS            |              13
+       24 | Tartan Paint              |               9
+       25 | Spirit Level Bubble       |               5
+(25 rows)
+

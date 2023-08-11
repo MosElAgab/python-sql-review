@@ -2,10 +2,8 @@ import pg8000.native as pg
 import getpass
 
 
-def get_table(table_name):
+def get_table(table_name, database):
     username = getpass.getuser()
-    database = 'nc_sells_fridges_draft'
-
     with pg.Connection(user=username, database=database) as conn:
         data = conn.run(f'SELECT * FROM {pg.identifier(table_name)}')
         columns_title = [column['name'] for column in conn.columns]
