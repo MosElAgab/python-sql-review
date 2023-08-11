@@ -37,34 +37,34 @@ new tables:
 
 - dim_features
 
- feature_id |       feature_name       
-------------+--------------------------
-          1 | {Designer}
-          2 | {Faux-Faux-Leather}
-          3 | {Fragrance}
-          4 | {Classic}
-          5 | {Roller-Application}
-          6 | {Multipack}
-          7 | {Breezy}
-          8 | {Restorative}
-          9 | {Multi-coloured}
-         10 | {Functional}
-         11 | {Unique}
-         12 | {Fluffy}
-         13 | {Fun-for-all-the-family}
-         14 | {Friendship-killer}
-         15 | {Safe}
-         16 | {Rare}
-         17 | {Drum-sticks}
-         18 | {Stool}
-         19 | {2-player}
-         20 | {Variable-weight}
-         21 | {Mirror-finish}
-         22 | {"DIY kit"}
-         23 | {Straps}
-         24 | {Scary}
-         25 | {Immersive-experience}
-         26 | {Balanced}
+ feature_id |      feature_name      
+------------+------------------------
+          1 | Designer
+          2 | Faux-Faux-Leather
+          3 | Fragrance
+          4 | Classic
+          5 | Roller-Application
+          6 | Multipack
+          7 | Breezy
+          8 | Restorative
+          9 | Multi-coloured
+         10 | Functional
+         11 | Unique
+         12 | Fluffy
+         13 | Fun-for-all-the-family
+         14 | Friendship-killer
+         15 | Safe
+         16 | Rare
+         17 | Drum-sticks
+         18 | Stool
+         19 | 2-player
+         20 | Variable-weight
+         21 | Mirror-finish
+         22 | DIY kit
+         23 | Straps
+         24 | Scary
+         25 | Immersive-experience
+         26 | Balanced
 (26 rows)
 
 
@@ -98,4 +98,51 @@ new tables:
        24 | Tartan Paint              |               9
        25 | Spirit Level Bubble       |               5
 (25 rows)
+
+
+- stock_feature_junc
+
+ stock_feature_id | feature_id | stock_id 
+------------------+------------+----------
+                1 |          1 |        1
+                2 |          2 |        1
+                3 |          3 |        2
+                4 |          1 |        2
+                5 |          4 |        3
+                6 |          5 |        4
+                7 |          6 |        4
+                8 |          1 |        5
+                9 |          7 |        5
+               10 |          8 |        6
+               11 |          2 |        7
+               12 |          9 |        7
+               13 |         10 |        7
+               14 |          4 |        8
+               15 |         11 |        9
+               16 |          1 |        9
+               17 |         12 |       10
+               18 |         13 |       11
+               19 |         14 |       11
+               20 |         15 |       12
+               21 |         16 |       13
+               22 |         12 |       14
+               23 |         17 |       15
+               24 |         18 |       15
+               25 |         19 |       16
+               26 |         20 |       17
+               27 |          1 |       18
+               28 |         21 |       18
+               29 |          4 |       19
+               30 |         10 |       20
+               31 |          1 |       21
+               32 |         22 |       21
+               33 |         23 |       22
+               34 |          1 |       22
+               35 |         24 |       23
+               36 |         25 |       23
+               37 |         16 |       24
+               38 |         11 |       24
+               39 |          1 |       24
+               40 |         26 |       25
+(40 rows)
 

@@ -3,11 +3,11 @@ from src.utilities import (format_stock_feature)
 # test data
 new_stock_data = [
     {
-        'item_id': 1,
+        'stock_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'amount_in_stock': 5
     }, {
-        'item_id': 2,
+        'stock_id': 2,
         'item_name': 'Eau de Fromage',
         'amount_in_stock': 10
     }
@@ -28,13 +28,13 @@ original_stock_data = [
         'item_name': 'Louboutin Flip Flops',
         'features': ['Designer', 'Faux-Faux-Leather'],
         'department': 'Footwear',
-        'amount': 5
+        'amount_in_stock': 5
     }, {
         'item_id': 2,
         'item_name': 'Eau de Fromage',
         'features': ['Designer'],
         'department': 'Beauty',
-        'amount': 10
+        'amount_in_stock': 10
     }
 ]
 
@@ -52,12 +52,12 @@ def test_format_stock_feature_handles_multiple_data():
                                   original_stock_data)
     expected_output = [[1, 1], [1, 2], [2, 1]]
     assert output == expected_output
-    new_stock_data[0]['item_id'] = 7
+    new_stock_data[0]['stock_id'] = 7
     output = format_stock_feature(new_stock_data, new_feature_data,
                                   original_stock_data)
     expected_output = [[7, 1], [7, 2], [2, 1]]
     assert output == expected_output
-    new_stock_data[0]['item_id'] = 1
+    new_stock_data[0]['stock_id'] = 1
     # example does not use new_stock_data to update item_id !!!
 
 

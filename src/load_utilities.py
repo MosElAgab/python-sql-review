@@ -23,7 +23,7 @@ def populate_dim_features(features):
     with pg.Connection(user=username, database=database) as conn:
         for feature in features:
             conn.run('INSERT INTO dim_features (feature_name)'
-                     ' VALUES (:feature)', feature=feature)
+                     ' VALUES (:feature)', feature=feature[0])
 
 
 def populate_dim_stock(stock):
@@ -38,5 +38,17 @@ def populate_dim_stock(stock):
                      item_name=item[0],
                      amount_in_stock=item[1])
 
+
+def populate_stock_feature_junc(junction_table):
+    username = getpass.getuser()
+    database = 'nc_sells_fridges'
+    if len(get_table('stock_feature_junc', database)) > 0:
+        return 'table already filled'
+    with pg.Connection(user=username, database=database) as conn:
+        for row in junction_table:
+            conn.run('INSERT INTO stock_feature_junc (stock_id, feature_id)'
+                     'VALUES (:stock_id, :feature_id)',
+                     stock_id=row[0], feature_id=row[1])
+    
 
 # test load utilites

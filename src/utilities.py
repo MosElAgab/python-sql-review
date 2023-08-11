@@ -74,21 +74,21 @@ def format_staff(staff_list: list, departments_list: list) -> list:
     return output
 
 
-def format_stock_feature(new_stock_data, new_feature_data,
-                         original_stock_data):
-    if len(new_stock_data) == 0:
+def format_stock_feature(dim_stock, dim_features,
+                         items):
+    if len(dim_stock) == 0:
         return []
     result = []
-    for item in original_stock_data:
+    for item in items:
+        stock_id = None
+        for stock in dim_stock:
+            if stock['item_name'] == item['item_name']:
+                stock_id = stock['stock_id']
         for feature in item['features']:
-            item_id = None
-            for new_stock in new_stock_data:
-                if item['item_name'] == new_stock['item_name']:
-                    item_id = new_stock['item_id']
-                    break
-            for new_feature in new_feature_data:
-                if new_feature['feature_name'] == feature:
-                    result.append([item_id, new_feature['feature_id']])
+            for dim_feature in dim_features:
+                if dim_feature['feature_name'] == feature:
+                    result.append([stock_id, dim_feature['feature_id']])
+    
     return result
 
 

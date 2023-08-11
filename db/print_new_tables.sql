@@ -10,3 +10,6 @@ SELECT * FROM dim_features;
 
 \echo '\n- dim_stock\n'
 SELECT * FROM dim_stock;
+
+\echo '\n- stock_feature_junc\n'
+SELECT * FROM stock_feature_junc;
