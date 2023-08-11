@@ -276,7 +276,7 @@ Please note that the price, quantity, and created_at values should be replaced w
 To begin this section, please execute the setup-db.sql file using the following command:
 
 ```sh
-psql -f setup-db.sql
+psql -f db/setup-db.sql
 ```
 
 This command will create both databases and insert data into the first database, preparing it for the subsequent tasks.

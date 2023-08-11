@@ -8,8 +8,13 @@ def format_departments(staff):
         if isinstance(member, dict) is not True:
             messege = 'invalid_input, input must be a list of dictionaries'
             raise TypeError(messege)
-    departments = [[member['department']] for member in staff]
-    return departments
+    departments = [member['department'] for member in staff]
+    unique_departments = []
+    for department in departments:
+        if department not in unique_departments:
+            unique_departments.append(department)
+    unique_departments = [[department] for department in unique_departments]
+    return unique_departments
 
 
 def format_stock(stock):
@@ -21,7 +26,7 @@ def format_stock(stock):
         if isinstance(item, dict) is not True:
             messege = 'invalid_input, input must be a list of dictionaries'
             raise TypeError(messege)
-    items = [[item['item_name'], item['amount']] for item in stock]
+    items = [[item['item_name'], item['amount_in_stock']] for item in stock]
     return items
 
 

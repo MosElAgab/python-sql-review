@@ -4,7 +4,7 @@ import pytest
 
 # test function return type list
 def test_format_stock_returns_list_with_valid_input():
-    assert type(format_stock([{'item_name': '', 'amount': 9}])) == list
+    assert type(format_stock([{'item_name': '', 'amount_in_stock': 9}])) == list
 
 
 # it only accepts input of type list
@@ -34,7 +34,7 @@ def test_format_departments_handles_single_value_input():
         'item_name': 'Nike Air Max Sneakers',
         'features': ['Air Cushioning', 'Mesh Upper'],
         'department': 'Footwear',
-        'amount': 8
+        'amount_in_stock': 8
     }]
     expected_result = [['Nike Air Max Sneakers', 8]]
     assert format_stock(stock) == expected_result
@@ -47,13 +47,13 @@ def test_format_stock_handles_multiple_values_input():
         'item_name': 'Nike Air Max Sneakers',
         'features': ['Air Cushioning', 'Mesh Upper'],
         'department': 'Footwear',
-        'amount': 8
+        'amount_in_stock': 8
     }, {
         'item_id': 2,
         'item_name': 'Gourmet Chocolate Box',
         'features': ['Assorted Flavors', 'Luxury Packaging'],
         'department': 'Food & Beverages',
-        'amount': 15
+        'amount_in_stock': 15
     }
     ]
     expected_result = [['Nike Air Max Sneakers', 8],

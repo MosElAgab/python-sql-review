@@ -57,6 +57,27 @@ def test_format_departments_handles_multiple_values_input():
     assert format_departments(staff) == expected_result
 
 
+# test function for duplicate departments
+def test_format_department_removes_duplicate():
+    staff = [{
+        'staff_id': 1,
+        'first_name': 'Will',
+        'last_name': 'Crawley',
+        'department': 'Beauty'
+        }, {
+        'staff_id': 2,
+        'first_name': 'Cat',
+        'last_name': 'Hoang',
+        'department': 'Footwear'
+        }, {
+        'staff_id': 3,
+        'first_name': 'Ali',
+        'last_name': 'Haider',
+        'department': 'Footwear'
+        }
+        ]
+    expected_result = [['Beauty'], ['Footwear']]
+    assert format_departments(staff) == expected_result
+
 # test case to handle missing departments
 # tets case to handle departments with wrong data type
-# test for duplicate departments

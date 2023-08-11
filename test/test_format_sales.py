@@ -76,8 +76,8 @@ def test_format_sales_returns_list_with_valid_input():
     assert isinstance(output, list)
 
 
-# test fucntion with valid single sales data
-def test_format_sales_handles_single_orginal_sales_date():
+# test fucntion with valid sales data
+def test_format_sales_handles_orginal_sales_date():
     output = format_sales(new_stock_data, new_staff_data,
                           original_sales_data[0:1])
     expected_output = [[1, 1, 22.49, 1, '2023-01-03 10:34:56']]
