@@ -82,3 +82,14 @@ run-checks: test-all run-flake
 ## install pg8000
 pg8000:
 	$(call execute_in_env, $(PIP) install pg8000)
+
+## print all tables
+print-all-tables:
+	$(call execute_in_env, psql -f db/print_all_tables.sql > all_tables.txt)
+
+## run ETL
+run-ETL:
+	$(call execute_in_env, PYTHONPATH=${PYTHONPATH} python src/orchestration.py)
+
+## run code
+run-code: setup-database run-ETL print-all-tables
