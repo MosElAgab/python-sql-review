@@ -3,22 +3,22 @@ from src.utilities import (format_sales)
 # test data
 new_stock_data = [
     {
-        'item_id': 1,
+        'stock_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'amount_in_stock': 5
     },
     {
-        'item_id': 2,
+        'stock_id': 2,
         'item_name': 'Eau de Fromage',
         'amount_in_stock': 10
     },
     {
-        'item_id': 3,
+        'stock_id': 3,
         'item_name': 'Luxury Watch',
         'amount_in_stock': 8
     },
     {
-        'item_id': 4,
+        'stock_id': 4,
         'item_name': 'Designer Handbag',
         'amount_in_stock': 15
     }

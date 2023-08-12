@@ -18,20 +18,20 @@ new tables:
 
  department_id | department_name 
 ---------------+-----------------
-             1 | {Footwear}
-             2 | {Beauty}
-             3 | {Grocery}
-             4 | {Health}
-             5 | {Kids}
-             6 | {Movies}
-             7 | {Home}
-             8 | {Games}
-             9 | {Baby}
-            10 | {Tools}
-            11 | {Music}
-            12 | {Sports}
-            13 | {Jewelry}
-            14 | {Garden}
+             1 | Footwear
+             2 | Beauty
+             3 | Grocery
+             4 | Health
+             5 | Kids
+             6 | Movies
+             7 | Home
+             8 | Games
+             9 | Baby
+            10 | Tools
+            11 | Music
+            12 | Sports
+            13 | Jewelry
+            14 | Garden
 (14 rows)
 
 
@@ -145,4 +145,57 @@ new tables:
                39 |          1 |       24
                40 |         26 |       25
 (40 rows)
+
+
+- dim_staff
+
+ staff_id | first_name |  last_name   | department_id 
+----------+------------+--------------+---------------
+        1 | Duncan     | Crawley      |             2
+        2 | Cat        | Hoang        |             1
+        3 | Vincents   | Guille       |             4
+        4 | Marlo      | Stidworthy   |             5
+        5 | Lesli      | Probet       |             6
+        6 | Sutherlan  | Housbey      |             1
+        7 | Erastus    | Vaines       |             7
+        8 | Phillipp   | Zanini       |             8
+        9 | Kirbee     | Abrahamovitz |             9
+       10 | Danika     | Archell      |            10
+       11 | Christie   | Whitland     |             9
+       12 | Seline     | Meekings     |            11
+       13 | Ailyn      | Laxen        |             8
+       14 | Riley      | Hopkynson    |            12
+       15 | Anastasie  | Mordan       |            13
+       16 | Stefanie   | Dartan       |            14
+       17 | Tannie     | Whiteland    |             7
+(17 rows)
+
+
+- fact_sales
+
+ sales_id | item_id | salesperson | price | quantity |     created_at      
+----------+---------+-------------+-------+----------+---------------------
+        1 |       1 |           1 | 14.95 |        2 | 2023-01-08 04:05:06
+        2 |       2 |           1 | 29.95 |        1 | 2023-01-18 05:09:34
+        3 |       3 |           6 | 23.47 |       26 | 2023-01-27 14:10:36
+        4 |       4 |           3 | 43.53 |       19 | 2023-01-07 09:27:43
+        5 |       5 |           2 | 59.08 |       18 | 2023-01-03 10:34:56
+        6 |       6 |           5 | 94.16 |       30 | 2023-01-14 08:05:23
+        7 |       7 |           2 |  9.12 |        6 | 2023-01-27 14:10:36
+        8 |       8 |           7 | 69.54 |       19 | 2023-01-08 04:05:06
+        9 |       9 |           4 | 82.87 |       11 | 2023-01-27 04:05:06
+       10 |      10 |           8 | 15.83 |       14 | 2023-01-03 10:34:56
+       11 |      11 |           9 | 37.48 |       27 | 2023-01-03 10:34:56
+       12 |      12 |          10 | 45.12 |       17 | 2023-01-03 10:34:56
+       13 |      13 |           1 | 71.08 |        9 | 2023-01-03 10:34:56
+       14 |      14 |          11 |  2.18 |       25 | 2023-01-27 14:10:36
+       15 |      15 |          12 | 84.13 |        5 | 2023-01-03 10:34:56
+       16 |      16 |          13 | 54.56 |       16 | 2023-01-27 14:10:36
+       17 |      17 |          14 | 82.52 |        4 | 2023-01-03 10:34:56
+       18 |      18 |          15 | 90.41 |       13 | 2023-01-27 14:10:36
+       19 |      19 |          15 | 13.44 |       22 | 2023-01-27 14:10:36
+       20 |      20 |          16 | 48.44 |       26 | 2023-01-03 10:34:56
+       21 |      22 |          17 | 57.14 |       29 | 2023-01-27 14:10:36
+       22 |      24 |          17 | 88.44 |        5 | 2023-01-03 10:34:56
+(22 rows)
 

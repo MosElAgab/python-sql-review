@@ -104,7 +104,7 @@ def format_sales(new_stock_data, new_staff_data,
     def find_item_id(item_name):
         for item in new_stock_data:
             if item['item_name'] == item_name:
-                return item['item_id']
+                return item['stock_id']
 
     for sale in original_sales_data:
         row = []

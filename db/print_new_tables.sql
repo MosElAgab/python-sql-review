@@ -13,3 +13,9 @@ SELECT * FROM dim_stock;
 
 \echo '\n- stock_feature_junc\n'
 SELECT * FROM stock_feature_junc;
+
+\echo '\n- dim_staff\n'
+SELECT * FROM dim_staff;
+
+\echo '\n- fact_sales\n'
+SELECT * FROM fact_sales;
